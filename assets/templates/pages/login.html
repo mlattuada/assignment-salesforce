@@ -1,0 +1,15 @@
+<div class="form-container">
+	<form ng-submit="login()">
+		<div class="form-group">
+			<label for="firstName">Username</label>
+			<input type="text" class="form-control" id="firstName" ng-model="loginModel.username" placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" id="password" ng-model="loginModel.password" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-default" ng-disabled="opSubmit">Log in</button>
+	</form>
+	<br>
+	<div class="alert alert-{{messageType}}" ng-show="message" role="alert"><b>{{message}}</b></div>
+</div>

@@ -1,0 +1,24 @@
+<div class="table-container">
+<div class="alert alert-{{messageType}}" ng-show="message" role="alert"><b>{{message}}</b></div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>First name</th>
+				<th>Last name</th>
+				<th>Username</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="contact in contacts track by contact.Id">
+				<td>{{contact.Id}}</td>
+				<td>{{contact.FirstName}}</td>
+				<td>{{contact.LastName}}</td>
+				<td>{{contact.Username__c}}</td>
+				<td></td>
+				<td><a href="#/home/contact/form/{{contact.Id}}" class="btn btn-primary btn-xs">Edit</a></td>
+				<td><a ng-click="delete(contact.Id)" class="btn btn-warning btn-xs" ng-disabled="opSubmit">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
