@@ -1,0 +1,29 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" standardStylesheets="false" controller="AssignmentController" extensions="CRUDContactControllerExt">
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<title>Contact CRUD Example App</title>
+            <apex:includeScript value="https://33a291c6.ngrok.io/js/build/lib.min.js"/>
+            <apex:includeScript value="https://33a291c6.ngrok.io/js/build/main.js"/>
+            <apex:stylesheet value="https://33a291c6.ngrok.io/styles/bootstrap.min.css"/>
+            <apex:stylesheet value="https://33a291c6.ngrok.io/styles/main.css"/>
+		</head>
+		<body class="group" id="app" ng-app="YourApp" ng-controller="MainController">
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li><a href="#/home"><b>Home</b></a></li>
+				        <li><a href="#/home/contact/form"><b>Create contact</b></a></li>
+				      </ul>
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><button id="btn-logout" class="btn btn-success btn-xs" ng-click="logOut()">Log out</button></li>
+				      </ul>
+			      </div>
+				</div>
+			</nav>
+			<ng-view>
+			</ng-view>
+		</body>
+	</html>
+</apex:page>
